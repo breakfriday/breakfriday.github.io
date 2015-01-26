@@ -10,7 +10,7 @@ define(function(require){
     var webApp=angular.module("webApp",["ui.router","ngSanitize",controllers.name])
     var template=require("text!view/template.html")
     webApp.config(["$stateProvider","$urlRouterProvider",function($stateProvider, $urlRouterProvider){
-        $urlRouterProvider.otherwise("/html5Load1");
+        $urlRouterProvider.otherwise("/resume");
         //
         // Now set up the states
         $stateProvider
@@ -23,14 +23,11 @@ define(function(require){
                 url: "/objectAsData",
                 templateUrl: "view/objectAsData.html"
             })*/
-            .state('css3_1', {
-                url: "/css3_1",
+            .state('resume', {
+                url: "/resume",
                 templateUrl: "view/css3_1.html"
             })
-            .state('html5Load1', {
-                url: "/html5Load1",
-                templateUrl: "view/html5Loading1.html"
-            })
+
     }])
 
     var putTpl=["$templateCache","tpl",function($templateCache,template){
